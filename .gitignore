@@ -1,0 +1,11 @@
+# Binary files #
+*
+!*.*
+!*/
+
+# Bin #
+bin/
+
+# Coverage file
+
+*.out
