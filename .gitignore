@@ -9,3 +9,6 @@ bin/
 # Coverage file
 
 *.out
+
+#sensitive data 
+httpserver/handler/sensitive.go
