@@ -14,6 +14,7 @@ run_binaries: build_binaries
 format:
 	go fmt ./...
 lint:
+	sudo snap install golangci-lint
 	golangci-lint run ./...
 
 test:
