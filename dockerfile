@@ -1,41 +1,26 @@
+# base stage that copy files and builds them
+
 FROM golang:1.22.5-alpine3.20 AS base
 
 WORKDIR /app
 
-COPY go.mod go.sum ./
-
-COPY pkg/httpserver ./pkg/httpserver/
-COPY cmd/httpserver/main.go ./cmd/httpserver/
-
-COPY pkg/ginserver ./pkg/ginserver/
-COPY cmd/ginserver/main.go ./cmd/ginserver/
-
-ENV PORT=8080
+COPY . .
 
 RUN go mod download
 
-FROM base AS build-http
-RUN go build -o /bin/httpserver ./cmd/httpserver
+RUN go build -o /bin/httpserver ./cmd/httpserver/main.go
+RUN go build -o /bin/ginserver ./cmd/ginserver/main.go
 
-
-FROM base AS build-gin
-RUN go build -o /bin/ginserver ./cmd/ginserver
-
-
+# run stage that run binaries
 FROM scratch AS http
-COPY --from=build-http /bin/httpserver /cmd/
-
+COPY --from=base /bin/httpserver /bin/
 ENTRYPOINT [ "/bin/httpserver" ]
 
-EXPOSE 8080
-
-CMD ["./main"]
+EXPOSE 8090
 
 FROM scratch AS gin
-COPY --from=build-gin /bin/ginserver /cmd/
-
+COPY --from=base /bin/ginserver /bin/
 ENTRYPOINT [ "/bin/ginserver" ]
 
-EXPOSE 8080
+EXPOSE 8085
 
-CMD ["./main"]

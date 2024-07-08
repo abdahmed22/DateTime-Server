@@ -10,5 +10,6 @@ bin/
 
 *.out
 
-#sensitive data 
-httpserver/handler/sensitive.go
+# Docker file
+
+!dockerfile
