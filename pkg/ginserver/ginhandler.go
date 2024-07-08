@@ -6,6 +6,12 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+func SetupRouter() *gin.Engine {
+	r := gin.Default()
+	r.GET("/datetime", GetDateTimeHandler)
+	return r
+}
+
 func GetDateTimeHandler(c *gin.Context) {
 	currentDateTime := time.Now()
 
