@@ -11,7 +11,7 @@ func main() {
 	r := gin.Default()
 	r.GET("/datetime", ginserver.GetDateTimeHandler)
 
-	err := r.Run()
+	err := r.Run(":8080")
 
 	if err != nil {
 		log.Fatalf("HTTP server error: %v", err)
