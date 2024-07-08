@@ -10,6 +10,7 @@ bin/
 
 *.out
 
-# Docker file
+# Docker file and Make file
 
 !dockerfile
+!Makefile
