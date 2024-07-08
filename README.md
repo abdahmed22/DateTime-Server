@@ -27,7 +27,7 @@ This end point returns a message that has the current date and time as a JSON fo
    user@user-VirtualBox:~$ ./main
    ```
 7. Open a web browser of your choice.
-8. Use http://localhost:8090/datetime for http server or http://localhost:8085/datetime for gin server to perform a request.
+8. Use http://localhost:8090/datetime for http server or http://localhost:8080/datetime for gin server to perform a request.
 9. Shutdown the server using ctrl + c inside the terminal.
 
 ## Tests
