@@ -32,3 +32,17 @@ This end point returns a message that has the current date and time as a JSON fo
 
 ## Tests
 
+=== RUN   TestClientCanHitAPI
+=== RUN   TestClientCanHitAPI/happy_path_-_can_hit_the_api_and_return_date_&_time
+--- PASS: TestClientCanHitAPI (0.00s)
+    --- PASS: TestClientCanHitAPI/happy_path_-_can_hit_the_api_and_return_date_&_time (0.00s)
+PASS
+ok      github.com/codescalersinternships/DateTime-Server-Abdelrahman-Mahmoud/pkg/httpclient    (cached)
+=== RUN   Test_GetDateTimeHandler
+=== RUN   Test_GetDateTimeHandler/happy_path_-_can_hit_the_api_and_return_date_&_time
+--- PASS: Test_GetDateTimeHandler (0.00s)
+    --- PASS: Test_GetDateTimeHandler/happy_path_-_can_hit_the_api_and_return_date_&_time (0.00s)
+PASS
+ok      github.com/codescalersinternships/DateTime-Server-Abdelrahman-Mahmoud/pkg/httpserver    (cached)
+
+
