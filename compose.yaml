@@ -1,9 +1,9 @@
 services:
   http:
-    image: buildme-http:v1.0
+    image: buildme-http:v1
     ports:
       - "8090:8090"
   gin:
-    image: buildme-gin:v1.0
+    image: buildme-gin:v1
     ports:
       - "8080:8080"
