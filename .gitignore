@@ -1,0 +1,16 @@
+# Binary files #
+*
+!*.*
+!*/
+
+# Bin #
+bin/
+
+# Coverage file
+
+*.out
+
+# Docker file and Make file
+
+!dockerfile
+!Makefile
